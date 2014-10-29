@@ -19,7 +19,22 @@
       accessToken: '234553568.467ede5.bae2604e97df4b3ba61e37a6c41e2245',
       clientId: 'bf7acb5d25b841a7ae168fc0fea11208'
     });
-
+    
+    var $container = $('#container');
+    // init
+    $container.isotope({
+	  getSortData: {
+        likes: '.likes' // text from querySelector
+      },  
+      itemSelector: '.item',
+      layoutMode: 'fitRows',
+      sortBy: 'likes'
+    });
+    
   };
+  
+  function ajaxCall(){
+    $container.isotope('updateSortData').isotope();
+  }
 
 })(jQuery); 
