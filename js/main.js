@@ -27,7 +27,7 @@
         likes: '.likes' // text from querySelector
       },  
       itemSelector: '.item',
-      layoutMode: 'fitRows',
+      layoutMode: 'vertical',
       sortBy: 'likes'
     });
     
