@@ -1,0 +1,25 @@
+<html>
+<head>
+<script type="text/javascript" src="js/instafeed.min.js"></script>
+<script type="text/javascript">
+    var feed = new Instafeed({
+        get: 'user',
+        userId: 270865733,
+        accessToken: '234553568.467ede5.bae2604e97df4b3ba61e37a6c41e2245',
+        limit: 10,
+        sortBy: 'most-liked',
+        resolution: 'thumbnail',
+        template: '<li><h2>Likes:{{likes}}</h2><p>{{caption}}</p><img src="{{image}}" /></li>',
+        filter: function(image) {
+	        return image.tags.indexOf('nashville') >= 0;
+	    }
+    });
+    feed.run();
+</script>
+</head>
+<body>
+
+<ul id="instafeed"></ul>
+
+</body>
+</html>
