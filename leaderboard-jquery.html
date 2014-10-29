@@ -3,7 +3,6 @@
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-instagram/0.3.1/instagram.min.js"></script>
 <script type="text/javascript">
-<script>
 jQuery(function($) {
   $('.instagram').on('willLoadInstagram', function(event, options) {
     console.log(options);
@@ -12,11 +11,15 @@ jQuery(function($) {
     console.log(response);
   });
   $('.instagram').instagram({
-    hash: 'love',
-    clientId: 'YOUR-CLIENT-ID-HERE'
+    hash: 'mstreet',
+    count: 100,
+    accessToken: '234553568.467ede5.bae2604e97df4b3ba61e37a6c41e2245',
+    clientId: 'bf7acb5d25b841a7ae168fc0fea11208'
   });
 });
-</script>
+
+
+
 </script>
 </head>
 <body>
