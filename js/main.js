@@ -64,6 +64,16 @@
       layoutMode   : 'vertical',
       sortBy       : 'likes'
     });
+<<<<<<< Updated upstream
+=======
+    
+    $container.isotope('updateSortData').isotope();
+    
+  };
+  
+  function ajaxCall(){
+    $container.isotope('updateSortData').isotope();
+>>>>>>> Stashed changes
   }
 
 })(jQuery);
