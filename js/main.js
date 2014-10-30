@@ -77,6 +77,13 @@
       layoutMode   : 'vertical',
       sortBy       : 'likes'
     });
+    
+    $container.isotope('updateSortData').isotope();
+    
+  };
+  
+  function ajaxCall(){
+    $container.isotope('updateSortData').isotope();
   }
 
 })(jQuery);

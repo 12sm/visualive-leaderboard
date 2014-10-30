@@ -1,4 +1,13 @@
-body {}
+body {
+background:url(../img/bg1.jpg) top center scroll no-repeat;
+background-size:cover;	
+}
+
+.container-fluid {
+height:100%;
+width:100%;
+overflow:hidden;	
+}
 
 .item {
 display: block;
