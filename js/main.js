@@ -32,16 +32,29 @@
 
   function didLoad(){
     $('.instagram').on('didLoadInstagram', function(event, response) {
-      var likes = [];
-      var data = response;
       console.log(response);
+
+      var mostPopular = [];
       for (var i = 0; i < 10; i++) {
-        likes.push(response.data[i].likes.count);
+        mostPopular.push(response.data[i]);
       };
-      var order = likes.sort(function(a, b){return b - a});
-      console.log(order);
+      mostPopular.sort(sortByLikes);
+      console.log(mostPopular);
+
+      var likes = [];
+      for (var i = 0; i < 10; i++) {
+        likes.push(mostPopular[i].likes.count);
+      };
+      console.log(likes);
+
       gridIt();
     });
+  }
+
+  function sortByLikes(a, b){
+    var aCount = a.likes.count;
+    var bCount = b.likes.count;
+    return ((bCount < aCount) ? -1 : ((bCount > aCount) ? 1 : 0));
   }
 
   function query(){
