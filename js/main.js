@@ -33,6 +33,7 @@
       mostPopular.push(response.data[i]);
     };
     mostPopular.sort(sortByLikes);
+    console.log(mostPopular);
   }
 
   function sortByLikes(a, b){
@@ -43,14 +44,20 @@
 
   function rank(dom){
     var $items = dom.find('.item');
+    $('.img').remove();
     $items.each( function( i, item ) {
       var $item = $(item);
-      $item.find('.likes').text( mostPopular[i].likes.count );
-      $item.find('.username').text( mostPopular[i].user.username );
-      var $photoUrl = mostPopular[i].images.standard_resolution.url;
       var $img = $('<img>');
+      var position = i + 1;
+      var photoUrl = mostPopular[i].images.standard_resolution.url;
+      var caption = mostPopular[i].caption.text;
+      caption.split();
+
+      $item.find('.rank').text( position );
+      $item.find('.likes').text( mostPopular[i].likes.count );
+      $item.find('.username').text( caption );
       $img.addClass('img');
-      $img.attr('src', $photoUrl);
+      $img.attr('src', photoUrl);
       $item.find('.photo').append($img);
     });
     dom.isotope('updateSortData', $items);
