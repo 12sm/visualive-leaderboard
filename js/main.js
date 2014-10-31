@@ -64,9 +64,9 @@
       var photoUrl = costumes[i].images.standard_resolution.url;
       var caption = costumes[i].caption.text;
       if (caption.contains("@")){
-        caption = caption.split("@");
-        caption = caption[1].split(" ", 1);
-        $item.find('.username').text( '@' + caption[0] );
+        var cap = caption.split("@");
+        var tion = cap[1].split(" ", 1);
+        $item.find('.username').text( '@' + tion[0] );
       } else {
         $item.find('.username').text( '@mstreetnash' );
       }
@@ -97,9 +97,9 @@
     var imaj = costumes[counter].images.standard_resolution.url;
     var capshun = costumes[counter].caption.text;
     if (capshun.contains("@")){
-      capshun = capshun.split("@", 2);
-      capshun = capshun[1].split(" ", 1);
-      $('.user').text( "@" + capshun[0] );
+      var cop = capshun.split("@");
+      var shun = cop[1].split(" ", 1);
+      $('.user').text( "@" + shun[0] );
     } else {
       $('.username').text( '@mstreetnash' );
     }
