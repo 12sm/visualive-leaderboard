@@ -3,10 +3,15 @@ background:url(../img/redback.jpg) top center scroll no-repeat;
 background-size:cover;
 }
 
+.header img {
+  width:100%;
+  height:auto;
+  padding:15px;
+}
+
 .container-fluid {
   height:100%;
   width:100%;
-  overflow:hidden;
 }
 
 .item {
@@ -25,7 +30,7 @@ background-size:cover;
 }
 
 #slider {
-  width: 717px;
-  height: 717px;
-  background-size: cover;
+  height: 0px;
+  padding-bottom:51%;
+  background-size: contain;
 }
