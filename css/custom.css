@@ -64,7 +64,13 @@ body {
   width:100%;
   height:auto;	
   margin-top:20px;
+  -webkit-box-shadow: 0 0 10px 5px rgba(0,0,0,.8);
+  -moz-shadow: 0 0 10px 5px rgba(0,0,0,.8);
+  box-shadow: 0 0 10px 5px rgba(0,0,0,.8);
+  border: 1px solid rgba(34, 19, 19, 1);
 }
+}
+
 
 .board {
   width: 51%;
