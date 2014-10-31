@@ -58,6 +58,13 @@ body {
   width: 37%;
   margin: 0px 0px 0px 4%;
   float: left;
+  text-shadow: 0 0 6px rgba(0,0,0,1);
+}
+
+#slider i.fa.fa-heart {
+  color: rgb(247, 44, 44);
+  font-size: 2em;
+  margin-right: 10px;
 }
 
 .bigImg {
@@ -110,7 +117,7 @@ span.ranking {
 }
 
 .board {
- margin-top:50px; 
+  margin-top:50px; 
 }
 
 i.fa.fa-heart {
