@@ -70,7 +70,6 @@ body {
 .bigImg {
   width:100%;
   height:auto;	
-  margin-top:20px;
 }
 
 .board {
@@ -122,4 +121,10 @@ span.ranking {
 
 i.fa.fa-heart {
   color: rgb(247, 44, 44);
+}
+
+.slider-info {
+  background: rgba(255,255,255,.1);
+  padding: 13px;
+  margin: 0;
 }
