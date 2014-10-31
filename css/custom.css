@@ -52,12 +52,10 @@ body {
 #slider {
   height: 0px;
   padding-bottom: 34%;
-  background-color: #fff;
   background-repeat: no-repeat;
   background-size: contain;
   width: 37%;
   margin: 2% 0px 0px 4%;
-  border: 30px solid #fff;
   float: left;
 }
 
