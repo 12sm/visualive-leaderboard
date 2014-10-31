@@ -11,7 +11,7 @@
       itemSelector : '.item',
       layoutMode   : 'vertical',
       getSortData  : {
-        likes      : '.likes'
+        rank       : '.rank'
       }
     });
     didLoad($container);
@@ -50,24 +50,24 @@
       var $img = $('<img>');
       var position = i + 1;
       var photoUrl = mostPopular[i].images.standard_resolution.url;
-      // var caption = mostPopular[i].caption.text;
-      // caption = caption.split("@", 2);
-      // caption = caption[1].split(" ", 1)
+      var caption = mostPopular[i].caption.text;
+      caption = caption.split("@", 2);
+      caption = caption[1].split(" ", 1);
+      $item.find('.username').text( '@' + caption[0] );
       $item.find('.rank').text( position );
       $item.find('.likes').text( mostPopular[i].likes.count );
-      // $item.find('.username').text( '@' + caption[0] );
       $img.addClass('img');
       $img.attr('src', photoUrl);
       $item.find('.photo').append($img);
     });
     dom.isotope('updateSortData', $items);
-    dom.isotope({ sortBy: 'likes', sortAscending: false });
+    dom.isotope({ sortBy: 'rank', sortAscending: true });
   }
 
   function query(){
     $('.instagram').instagram({
-      // userId      : 270865733,
-      hash        : 'cats',
+      userId      : 270865733,
+      // hash        : 'nashville',
       count       : 10,
       accessToken : '234553568.467ede5.bae2604e97df4b3ba61e37a6c41e2245',
       clientId    : 'bf7acb5d25b841a7ae168fc0fea11208'
@@ -78,19 +78,16 @@
     if (counter == 10){
       counter = 0;
     }
-
     $('.bigImg').remove();
-
     var $option = $('<img>');
     var spot = counter + 1;
     var imaj = mostPopular[counter].images.standard_resolution.url;
     // var capshun = mostPopular[counter].caption.text;
-
     // capshun = capshun.split("@", 2);
-    // capshun = capshun[1].split(" ", 1)
+    // capshun = capshun[1].split(" ", 1);
+    // $('.user').text( "@" + capshun[0] );
     $('.ranking').text( spot );
     $('.lykes').text( mostPopular[counter].likes.count );
-    // $('.user').text( capshun[0] );
     $option.addClass('bigImg');
     $option.attr('src', imaj);
     $('#slider').append($option);
