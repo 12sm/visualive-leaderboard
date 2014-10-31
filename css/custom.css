@@ -98,6 +98,15 @@ video#bgvid {
   opacity:1;
 }
 
+video#alphavid {
+  position: fixed; right: 0; bottom: 0;
+  min-width: 100%; min-height: 100%;
+  width: auto; height: auto; z-index: -100;
+  background: transparent;
+  opacity:1;
+  z-index:100!important;
+}
+
 span.rank, span.ranking {
   border-radius: 100px;
   width: 20px;
