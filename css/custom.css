@@ -46,7 +46,7 @@ span.default-text {
   display: block;
   float: left;
   margin: 0px;
-  padding: 0px;	
+  padding: 0px;
 }
 
 .item img {
@@ -89,13 +89,13 @@ span.default-text {
 
 .bigImg {
   width:100%;
-  height:auto;	
+  height:auto;
 }
 
 .board {
   width: 51%;
   float: right;
-  margin: 0% 4% 0% 0%;	
+  margin: 0% 4% 0% 0%;
 }
 
 video#bgvid {
@@ -132,7 +132,7 @@ div.likes-float-right {
 }
 
 .slider-info div.likes-float-right {
-  margin-top: 1%!important;	
+  margin-top: 1%!important;
 }
 
 div#info5 {
@@ -162,13 +162,13 @@ i.fa.fa-heart {
 
 #container.instagram {
   width: 90%;
-  float: right;	
+  float: right;
 }
 
 .rank-board {
   width: 10%;
   display: block;
-  float: left;	
+  float: left;
 }
 
 .rank-item {
@@ -182,3 +182,15 @@ i.fa.fa-heart {
   text-align: center;
   height: 0px;
 }
+
+.rank0 {}
+.rank1 {}
+.rank2 {}
+.rank3 {}
+.rank4 {}
+.rank5 {}
+.rank6 {}
+.rank7 {}
+.rank8 {}
+.rank9 {}
+.rank10 {}

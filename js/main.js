@@ -31,7 +31,7 @@
   function sortByHash(response){
     costumes = [];
     for (i = 0; i < 33; i++){
-      if (response.data[i].tags[0] == "cc" || response.data[i].tags[0] == "nomstreet14"){
+      if (response.data[i].tags[1] == "cc" && response.data[i].tags[0] == "nomstreet14"){
         costumes.push(response.data[i]);
       }
     };
@@ -56,6 +56,8 @@
       if (caption.indexOf("@") != -1){
         var cap = caption.split("@");
         var tion = cap[1].split(" ", 1);
+        $item.find('.username').text( '@' + tion[0] );
+      } else {
         $item.find('.username').text( '@' + tion[0] );
       }
       $item.find('.likes').text( costumes[i].likes.count );

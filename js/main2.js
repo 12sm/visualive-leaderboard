@@ -61,6 +61,7 @@
       $img.addClass('img');
       $img.attr('src', photoUrl);
       $item.find('.photo').append($img);
+      $item.addClass('rank' + i);
     });
     dom.isotope('updateSortData', $items);
     dom.isotope({ sortBy: 'likes', sortAscending: false });
