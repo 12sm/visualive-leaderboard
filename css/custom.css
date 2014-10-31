@@ -24,9 +24,24 @@ body {
   overflow: hidden;
 }
 
+.item .photo {
+  width: 12%;
+  display: block;
+  float: left;
+  margin: 0px;
+  padding: 0px;	
+}
+
 .item img {
   width:100%;
   height:auto;
+}
+
+.item .info {
+display: block;
+float: left;
+width: 80%;
+padding: 30px;
 }
 
 #slider {
@@ -41,6 +56,11 @@ body {
   float: left;
 }
 
+.bigImg {
+  width:100%;
+  height:auto;	
+}
+
 .board {
   width: 51%;
   float: right;
@@ -53,5 +73,5 @@ min-width: 100%; min-height: 100%;
 width: auto; height: auto; z-index: -100;
 background: url(../img/redback.jpg) no-repeat;
 background-size: cover;
-opacity:0.6;
+opacity:0.8;
 }
