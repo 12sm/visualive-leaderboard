@@ -55,7 +55,7 @@
       caption = caption[1].split(" ", 1)
       $item.find('.rank').text( position );
       $item.find('.likes').text( mostPopular[i].likes.count );
-      $item.find('.username').text( caption[0] );
+      $item.find('.username').text( '@' + caption[0] );
       $img.addClass('img');
       $img.attr('src', photoUrl);
       $item.find('.photo').append($img);
@@ -78,6 +78,25 @@
     if (counter == 10){
       counter = 0;
     }
+
+likes = mostPopular[counter].images.standard_resolution.url
+
+    $('bigImg').remove();
+
+    var $option = $('<img>');
+    var spot = counter + 1;
+    var imaj = mostPopular[counter].images.standard_resolution.url;
+    var capshun = mostPopular[counter].caption.text;
+
+    capshun = capshun.split("@", 2);
+    capshun = capshun[1].split(" ", 1)
+    $('.ranking').text( spot );
+    $('.lykes').text( mostPopular[counter].likes.count );
+    $('.user').text( capshun[0] );
+    $option.addClass('bigImg');
+    $option.attr('src', imaj);
+    ('#slider').append($option);
+
     document.getElementById('slider').style.backgroundImage = 'url(' + mostPopular[counter].images.standard_resolution.url + ')';
     counter++
   }
