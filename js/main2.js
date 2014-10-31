@@ -9,7 +9,7 @@
     var $container = $('#container');
     $container.isotope({
       itemSelector : '.item',
-      layoutMode   : 'vertical',
+      layoutMode   : 'masonry',
       getSortData  : {
         likes      : '.likes'
       }
@@ -17,7 +17,6 @@
     didLoad($container);
     query();
     setInterval(query, 5000);
-    setInterval(changePhoto, 3000);
   }
 
   function didLoad(dom){
@@ -74,29 +73,6 @@
       accessToken : '234553568.467ede5.bae2604e97df4b3ba61e37a6c41e2245',
       clientId    : 'bf7acb5d25b841a7ae168fc0fea11208'
     });
-  }
-
-  function changePhoto(){
-    if (counter == 10){
-      counter = 0;
-    }
-    $('.bigImg').remove();
-    var $option = $('<img>');
-    var imaj = costumes[counter].images.standard_resolution.url;
-    var capshun = costumes[counter].caption.text;
-    var spot = counter + 1;
-    $('.ranking').text( spot );
-    if (capshun.indexOf("@") != -1){
-      var cop = capshun.split("@");
-      var shun = cop[1].split(" ", 1);
-      $('.user').text( "@" + shun[0] );
-    }
-    $('.ranking').text( spot );
-    $('.lykes').text( costumes[counter].likes.count );
-    $option.addClass('bigImg');
-    $option.attr('src', imaj);
-    $('#slider').append($option);
-    counter++
   }
 
 })(jQuery);
