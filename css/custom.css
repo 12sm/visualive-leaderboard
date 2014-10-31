@@ -30,6 +30,13 @@ body {
   letter-spacing: 1px;
 }
 
+#slider span.user {
+  font-size:2em;
+  color: #FFF;
+  text-shadow: 0 0 6px rgba(0,0,0,1);
+  letter-spacing: 1px;
+}
+
 .item .photo {
   width: 12%;
   display: block;
@@ -65,10 +72,6 @@ body {
   color: rgb(247, 44, 44);
   font-size: 2em;
   margin-right: 10px;
-}
-
-#slider span.user {
-  
 }
 
 .bigImg {
