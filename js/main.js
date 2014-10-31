@@ -63,10 +63,13 @@
       var $img = $('<img>');
       var position = i + 1;
       var photoUrl = costumes[i].images.standard_resolution.url;
-      var caption = costumes[i].caption.text;
-      caption = caption.split("@");
-      caption = caption[1].split(" ", 1);
-      $item.find('.username').text( '@' + caption[0] );
+      // var caption = costumes[i].caption.text;
+      // caption = caption.split("@");
+      // caption = caption[1].split(" ", 1);
+      // $item.find('.username').text( '@' + caption[0] );
+
+      $item.find('.username').text( '@mstreetnash' );
+
       $item.find('.rank').text( position );
       $item.find('.likes').text( costumes[i].likes.count );
       $img.addClass('img');
