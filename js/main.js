@@ -2,8 +2,7 @@
   'use strict';
   $(document).ready(initialize);
 
-  var photos;
-  var mostPopular;
+  var photos, mostPopular, i;
   var counter = 0;
 
   function initialize(){
@@ -15,53 +14,25 @@
         likes      : '.likes'
       }
     });
-    // willLoad();
     didLoad($container);
     query();
     setInterval(query, 5000);
     setInterval(changePhoto, 3000);
   }
 
-  // function willLoad(){
-  //   $('.instagram').on('willLoadInstagram', function(event, options) {
-  //     console.log(options);
-  //   });
-  // }
-
   function didLoad(dom){
     $('.instagram').on('didLoadInstagram', function(event, response) {
-      var i;
-
-      mostPopular = [];
-      for (i = 0; i < 10; i++){
-        mostPopular.push(response.data[i]);
-      };
-      mostPopular.sort(sortByLikes);
-      console.log(mostPopular);
-
-      var likes = [];
-      for (i = 0; i < 10; i++){
-        likes.push(mostPopular[i].likes.count);
-      };
-      console.log(likes);
-
-      var $items = dom.find('.item');
-      var $item;
-      var $img;
-      var $photoUrl;
-      $items.each( function( i, item ) {
-        $item = $(item);
-        $item.find('.likes').text( mostPopular[i].likes.count );
-        $item.find('.username').text( mostPopular[i].user.username );
-        $photoUrl = mostPopular[i].images.standard_resolution.url;
-        $img = $('<img>');
-        $img.addClass('img');
-        $img.attr('src', $photoUrl);
-        $item.find('.photo').append($img);
-      });
-      dom.isotope('updateSortData', $items);
-      dom.isotope({ sortBy: 'likes', sortAscending: false });
+      sortPopular(response);
+      rank(dom);
     });
+  }
+
+  function sortPopular(response){
+    mostPopular = [];
+    for (i = 0; i < 10; i++){
+      mostPopular.push(response.data[i]);
+    };
+    mostPopular.sort(sortByLikes);
   }
 
   function sortByLikes(a, b){
@@ -70,8 +41,23 @@
     return ((bCount < aCount) ? -1 : ((bCount > aCount) ? 1 : 0));
   }
 
+  function rank(dom){
+    var $items = dom.find('.item');
+    $items.each( function( i, item ) {
+      var $item = $(item);
+      $item.find('.likes').text( mostPopular[i].likes.count );
+      $item.find('.username').text( mostPopular[i].user.username );
+      var $photoUrl = mostPopular[i].images.standard_resolution.url;
+      var $img = $('<img>');
+      $img.addClass('img');
+      $img.attr('src', $photoUrl);
+      $item.find('.photo').append($img);
+    });
+    dom.isotope('updateSortData', $items);
+    dom.isotope({ sortBy: 'likes', sortAscending: false });
+  }
+
   function query(){
-    console.log('query yo!');
     $('.instagram').instagram({
       userId      : 270865733,
       // hash        : 'nashville',
