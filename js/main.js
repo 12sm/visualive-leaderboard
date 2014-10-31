@@ -11,7 +11,7 @@
       itemSelector : '.item',
       layoutMode   : 'vertical',
       getSortData  : {
-        rank       : '.rank'
+        likes      : '.likes'
       }
     });
     didLoad($container);
@@ -61,23 +61,22 @@
     $items.each( function( i, item ) {
       var $item = $(item);
       var $img = $('<img>');
-      var position = i + 1;
       var photoUrl = costumes[i].images.standard_resolution.url;
-      // var caption = costumes[i].caption.text;
-      // caption = caption.split("@");
-      // caption = caption[1].split(" ", 1);
-      // $item.find('.username').text( '@' + caption[0] );
-
-      $item.find('.username').text( '@mstreetnash' );
-
-      $item.find('.rank').text( position );
+      var caption = costumes[i].caption.text;
+      if (caption.contains("@")){
+        caption = caption.split("@");
+        caption = caption[1].split(" ", 1);
+        $item.find('.username').text( '@' + caption[0] );
+      } else {
+        $item.find('.username').text( '@mstreetnash' );
+      }
       $item.find('.likes').text( costumes[i].likes.count );
       $img.addClass('img');
       $img.attr('src', photoUrl);
       $item.find('.photo').append($img);
     });
     dom.isotope('updateSortData', $items);
-    dom.isotope({ sortBy: 'rank', sortAscending: true });
+    dom.isotope({ sortBy: 'likes', sortAscending: false });
   }
 
   function query(){
@@ -95,13 +94,15 @@
     }
     $('.bigImg').remove();
     var $option = $('<img>');
-    var spot = counter + 1;
     var imaj = costumes[counter].images.standard_resolution.url;
-    // var capshun = mostPopular[counter].caption.text;
-    // capshun = capshun.split("@", 2);
-    // capshun = capshun[1].split(" ", 1);
-    // $('.user').text( "@" + capshun[0] );
-    $('.ranking').text( spot );
+    var capshun = costumes[counter].caption.text;
+    if (capshun.contains("@")){
+      capshun = capshun.split("@", 2);
+      capshun = capshun[1].split(" ", 1);
+      $('.user').text( "@" + capshun[0] );
+    } else {
+      $('.username').text( '@mstreetnash' );
+    }
     $('.lykes').text( costumes[counter].likes.count );
     $option.addClass('bigImg');
     $option.attr('src', imaj);
