@@ -185,5 +185,17 @@
         </div>
       </div>
     </div>
+    <video autoplay loop id="bgvid">
+      <source src="http://app.vslve.com/displays/assets/img/bgvid2.mp4" type="video/mp4">
+    </video>
+    <video autoplay loop id="alphavid">
+      <source src="img/alpha.webm">
+    </video>
+    <script type="text/javascript">
+      /* play video at a different speed */
+      document.getElementById("bgvid").defaultPlaybackRate = 1;
+      document.getElementById("bgvid").play();
+      document.getElementById("bgvid").playbackRate = 1;
+    </script>
   </body>
 </html>
