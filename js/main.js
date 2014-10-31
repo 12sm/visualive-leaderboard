@@ -3,6 +3,7 @@
   $(document).ready(initialize);
 
   var photos;
+  var mostPopular;
   var counter = 0;
 
   function initialize(){
@@ -31,18 +32,12 @@
     $('.instagram').on('didLoadInstagram', function(event, response) {
       var i;
 
-      var mostPopular = [];
+      mostPopular = [];
       for (i = 0; i < 10; i++){
         mostPopular.push(response.data[i]);
       };
       mostPopular.sort(sortByLikes);
       console.log(mostPopular);
-
-      photos = [];
-      for (i = 0; i < 10; i++){
-        photos.push(mostPopular[i].images.standard_resolution.url);
-      };
-      console.log(photos);
 
       var likes = [];
       for (i = 0; i < 10; i++){
@@ -90,7 +85,7 @@
     if (counter == 10){
       counter = 0;
     }
-    document.getElementById('slider').style.backgroundImage = 'url(' + photos[counter] + ')';
+    document.getElementById('slider').style.backgroundImage = 'url(' + mostPopular[counter].images.standard_resolution.url + ')';
     counter++
   }
 
