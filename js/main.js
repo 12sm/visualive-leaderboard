@@ -24,7 +24,6 @@
     $('.instagram').on('didLoadInstagram', function(event, response) {
       console.log(response);
       sortByHash(response)
-      // sortPopular(response);
       rank(dom);
     });
   }
@@ -39,15 +38,6 @@
     console.log(costumes);
     costumes.sort(sortByLikes);
   }
-
-  // function sortPopular(response){
-  //   mostPopular = [];
-  //   for (i = 0; i < 10; i++){
-  //     mostPopular.push(response.data[i]);
-  //   };
-  //   mostPopular.sort(sortByLikes);
-  //   console.log(mostPopular);
-  // }
 
   function sortByLikes(a, b){
     var aCount = a.likes.count;
@@ -67,8 +57,6 @@
         var cap = caption.split("@");
         var tion = cap[1].split(" ", 1);
         $item.find('.username').text( '@' + tion[0] );
-      } else {
-        $item.find('.username').text( '@mstreetnash' );
       }
       $item.find('.likes').text( costumes[i].likes.count );
       $img.addClass('img');
@@ -100,8 +88,6 @@
       var cop = capshun.split("@");
       var shun = cop[1].split(" ", 1);
       $('.user').text( "@" + shun[0] );
-    } else {
-      $('.username').text( '@mstreetnash' );
     }
     $('.lykes').text( costumes[counter].likes.count );
     $option.addClass('bigImg');
