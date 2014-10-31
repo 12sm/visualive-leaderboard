@@ -160,7 +160,7 @@ i.fa.fa-heart {
 .rank-item {
   padding: 1px 13px 136% 13px;
   display: block;
-  background: #000;
+  background: rgba(0,0,0,.6);
   margin: 0px 0px 17.6% 0px;
   color: #fff;
   font-weight: 800;
