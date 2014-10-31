@@ -2,19 +2,23 @@
   'use strict';
   $(document).ready(initialize);
 
+  var photos;
+  var counter = 0;
+
   function initialize(){
     var $container = $('#container');
     $container.isotope({
       itemSelector : '.item',
       layoutMode   : 'vertical',
       getSortData  : {
-        likes    : '.likes'
+        likes      : '.likes'
       }
     });
     // willLoad();
     didLoad($container);
     query();
     setInterval(query, 5000);
+    setInterval(changePhoto, 3000);
   }
 
   // function willLoad(){
@@ -25,16 +29,23 @@
 
   function didLoad(dom){
     $('.instagram').on('didLoadInstagram', function(event, response) {
-      var mostPopular = [];
       var i;
-      for (i = 0; i < 10; i++) {
+
+      var mostPopular = [];
+      for (i = 0; i < 10; i++){
         mostPopular.push(response.data[i]);
       };
       mostPopular.sort(sortByLikes);
       console.log(mostPopular);
 
+      photos = [];
+      for (i = 0; i < 10; i++){
+        photos.push(mostPopular[i].images.standard_resolution.url);
+      };
+      console.log(photos);
+
       var likes = [];
-      for (i = 0; i < 10; i++) {
+      for (i = 0; i < 10; i++){
         likes.push(mostPopular[i].likes.count);
       };
       console.log(likes);
@@ -54,7 +65,7 @@
         $item.find('.photo').append($img);
       });
       dom.isotope('updateSortData', $items);
-      dom.isotope({ sortBy: 'likes' });
+      dom.isotope({ sortBy: 'likes', sortAscending: false });
     });
   }
 
@@ -73,6 +84,14 @@
       accessToken : '234553568.467ede5.bae2604e97df4b3ba61e37a6c41e2245',
       clientId    : 'bf7acb5d25b841a7ae168fc0fea11208'
     });
+  }
+
+  function changePhoto(){
+    if (counter == 10){
+      counter = 0;
+    }
+    document.getElementById('slider').style.backgroundImage = 'url(' + photos[counter] + ')';
+    counter++
   }
 
 })(jQuery);
