@@ -75,7 +75,7 @@ body {
 .board {
   width: 51%;
   float: right;
-  margin: 2% 4% 0px 0px;	
+  margin: 0% 4% 0% 0%;	
 }
 
 video#bgvid {
@@ -113,10 +113,6 @@ span.ranking {
   color: #FFF;
   font-weight: bold;
   font-size: 1.5em;
-}
-
-.board {
-  margin-top:50px; 
 }
 
 i.fa.fa-heart {
