@@ -98,4 +98,12 @@ div#info5 {
 
 span.lykes {
   float: right;
+  color: #FFF;
+  font-size: 1.5em;
+}
+
+span.ranking {
+color: #FFF;
+font-weight: bold;
+font-size: 1.5em;
 }
