@@ -57,8 +57,9 @@ span.default-text {
 .item .info {
   display: block;
   float: left;
+  line-height: 1;
   width: 80%;
-  padding: 22px;
+  padding: 0px 22px 22px 22px;
 }
 
 #slider {
@@ -146,8 +147,8 @@ i.fa.fa-heart {
 }
 
 #container.instagram {
-width: 90%;
-float: right;	
+  width: 90%;
+  float: right;	
 }
 
 .rank-board {
@@ -157,13 +158,13 @@ float: right;
 }
 
 .rank-item {
-padding: 13px 13px 117% 13px;
-display: block;
-background: #000;
-margin: 0px 0px 17.6% 0px;
-color: #fff;
-font-weight: 800;
-font-size: 62px;
-text-align: center;
-height: 0px;
+  padding: 1px 13px 136% 13px;
+  display: block;
+  background: #000;
+  margin: 0px 0px 17.6% 0px;
+  color: #fff;
+  font-weight: 800;
+  font-size: 62px;
+  text-align: center;
+  height: 0px;
 }
