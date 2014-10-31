@@ -55,13 +55,14 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   width: 37%;
-  margin: 2% 0px 0px 4%;
+  margin: 0px 0px 0px 4%;
   float: left;
 }
 
 .bigImg {
   width:100%;
   height:auto;	
+  margin-top:20px;
 }
 
 .board {
