@@ -42,10 +42,10 @@ body {
 }
 
 .item .info {
-display: block;
-float: left;
-width: 80%;
-padding: 30px;
+  display: block;
+  float: left;
+  width: 80%;
+  padding: 22px;
 }
 
 #slider {
