@@ -24,10 +24,10 @@ body {
   height: 0px;
   overflow: hidden;
   padding: 13px 13px 12.8% 13px;
-  font-size:2em;
+  font-size:1.7em;
   color: #FFF;
   text-shadow: 0 0 6px rgba(0,0,0,1);
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
 }
 
 #slider span.user {
