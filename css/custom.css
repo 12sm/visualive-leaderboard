@@ -2,6 +2,7 @@ body {
   background:url(../img/redback.jpg) top center scroll no-repeat;
   background-size:cover;
   font-family: "lato",sans-serif!important;
+  font-size:16px;
 }
 
 .header img {
@@ -24,6 +25,7 @@ body {
   overflow: hidden;
   padding: 13px 13px 12.8% 13px;
   font-family: "lato",sans-serif!important;
+  font-size:5em;
 }
 
 .item .photo {
