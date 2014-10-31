@@ -16,6 +16,10 @@ body {
   width:100%;
 }
 
+span.default-text {
+  font-size: 14px;
+}
+
 .item {
   display: block;
   background: rgba(255,255,255,.1);
