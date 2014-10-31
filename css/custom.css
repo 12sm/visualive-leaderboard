@@ -24,7 +24,6 @@ body {
   height: 0px;
   overflow: hidden;
   padding: 13px 13px 12.8% 13px;
-  font-family: georgia!important;
   font-size:2em;
   color: #FFF;
   text-shadow: 0 0 6px rgba(0,0,0,1);
@@ -105,11 +104,15 @@ span.lykes {
 }
 
 span.ranking {
-color: #FFF;
-font-weight: bold;
-font-size: 1.5em;
+  color: #FFF;
+  font-weight: bold;
+  font-size: 1.5em;
 }
 
 .board {
  margin-top:50px; 
+}
+
+i.fa.fa-heart {
+  color: rgb(247, 44, 44);
 }
