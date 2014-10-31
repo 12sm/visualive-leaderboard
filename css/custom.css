@@ -1,6 +1,7 @@
 body {
   background:url(../img/redback.jpg) top center scroll no-repeat;
   background-size:cover;
+  font-family: "lato",sans-serif;
 }
 
 .header img {
