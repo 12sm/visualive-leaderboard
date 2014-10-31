@@ -23,6 +23,7 @@ body {
   height: 0px;
   overflow: hidden;
   padding: 13px 13px 12.8% 13px;
+  font-family: "lato",sans-serif!important;
 }
 
 .item .photo {
