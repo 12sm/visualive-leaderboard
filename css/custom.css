@@ -1,6 +1,6 @@
 body {
-background:url(../img/redback.jpg) top center scroll no-repeat;
-background-size:cover;
+  background:url(../img/redback.jpg) top center scroll no-repeat;
+  background-size:cover;
 }
 
 .header img {
@@ -30,13 +30,7 @@ background-size:cover;
 }
 
 #slider {
-<<<<<<< HEAD
-  width: 700px;
-  height: 700px;
-  background-size: cover;
-=======
   height: 0px;
   padding-bottom:51%;
   background-size: contain;
->>>>>>> ce244f54ee6968f9d99e702304b4d2a05aaceadf
 }
