@@ -28,7 +28,7 @@ span.default-text {
   height: 0px;
   overflow: hidden;
   padding: 13px 13px 13% 13px;
-  font-size: 1.7em;
+  font-size: 3em;
   color: #FFF;
   text-shadow: 0 0 6px rgba(0,0,0,1);
   letter-spacing: 1.5px;
@@ -58,8 +58,16 @@ span.default-text {
   display: block;
   float: left;
   line-height: 1;
-  width: 80%;
+  width: 88%;
   padding: 0px 22px 22px 22px;
+}
+
+.item .username {
+  width: 80%;
+  overflow: hidden;
+  display: block;
+  float: left;
+  margin-top: 4%;
 }
 
 #slider {
@@ -118,6 +126,13 @@ span.rank, span.ranking {
 
 div.likes-float-right {
   float: right;
+  margin-top: 5%;
+  width: 20%;
+  overflow: hidden;
+}
+
+.slider-info div.likes-float-right {
+  margin-top: 1%!important;	
 }
 
 div#info5 {
@@ -125,7 +140,6 @@ div#info5 {
 }
 
 span.lykes {
-  float: right;
   color: #FFF;
   font-size: 1.5em;
 }
