@@ -51,11 +51,11 @@
       var position = i + 1;
       var photoUrl = mostPopular[i].images.standard_resolution.url;
       var caption = mostPopular[i].caption.text;
-      caption.split();
-
+      caption = caption.split("@", 2);
+      caption = caption[1].split(" ", 1)
       $item.find('.rank').text( position );
       $item.find('.likes').text( mostPopular[i].likes.count );
-      $item.find('.username').text( caption );
+      $item.find('.username').text( caption[0] );
       $img.addClass('img');
       $img.attr('src', photoUrl);
       $item.find('.photo').append($img);
