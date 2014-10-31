@@ -98,14 +98,17 @@ color: #FFF;
 }
 
 div#info6 {
-color: #E4E4E4;
+color: #E4E4E4!important;
 }
+
 div#info7 {
-color: #C3C3C3;
+color: #C3C3C3!important;
 }
+
 div#info8 {
-color: #BDBDBD;
+color: #BDBDBD!important;
 }
+
 div#info9 {
-color: #A7A7A7;
+color: #A7A7A7!important;
 }
