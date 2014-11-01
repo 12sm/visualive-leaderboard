@@ -5,6 +5,8 @@ body {
   font-size:16px;
 }
 
+
+
 .header img {
   width:100%;
   height:auto;
@@ -14,6 +16,10 @@ body {
 .container-fluid {
   height:100%;
   width:100%;
+  padding-right: 50px;
+  padding-left: 50px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 span.default-text {
