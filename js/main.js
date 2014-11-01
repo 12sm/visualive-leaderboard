@@ -31,7 +31,7 @@
   function sortByHash(response){
     costumes = [];
     for (i = 0; i < 33; i++){
-      if (response.data[i].tags[1] == "cc" && response.data[i].tags[0] == "nomstreet14"){
+      if (response.data[i].tags[0] == "cc" && response.data[i].tags[1] == "nomstreet14"){
         costumes.push(response.data[i]);
       }
     };
