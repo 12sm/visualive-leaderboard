@@ -137,7 +137,10 @@ div.likes-float-right {
 }
 
 .slider-info div.likes-float-right {
-  margin-top: 1%!important;
+margin-top: 0px!important;
+position: absolute;
+top: 20px;
+right: 0px;
 }
 
 div#info5 {
@@ -160,9 +163,10 @@ i.fa.fa-heart {
 }
 
 .slider-info {
-  background: rgba(255,255,255,.1);
-  padding: 13px;
-  margin: 0;
+background: rgba(255,255,255,.1);
+padding: 13px;
+margin: 0;
+position: relative;
 }
 
 #container.instagram {
