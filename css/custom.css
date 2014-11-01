@@ -5,8 +5,6 @@ body {
   font-size:16px;
 }
 
-
-
 .header img {
   width:100%;
   height:auto;
@@ -37,6 +35,18 @@ span.default-text {
   color: #FFF;
   text-shadow: 0 0 6px rgba(0,0,0,1);
   letter-spacing: 1.5px;
+}
+
+.ite {
+  display: block;
+  background: rgba(255,255,255,.1);
+  margin-bottom: 2%;
+  overflow: hidden;
+  font-size: 2em;
+  color: #FFF;
+  text-shadow: 0 0 6px rgba(0,0,0,1);
+  letter-spacing: 1.5px;
+  background-size: contain;
 }
 
 #slider span.user {
@@ -137,10 +147,10 @@ div.likes-float-right {
 }
 
 .slider-info div.likes-float-right {
-margin-top: 0px!important;
-position: absolute;
-top: 20px;
-right: 0px;
+  margin-top: 0px!important;
+  position: absolute;
+  top: 20px;
+  right: 0px;
 }
 
 div#info5 {
@@ -163,10 +173,10 @@ i.fa.fa-heart {
 }
 
 .slider-info {
-background: rgba(255,255,255,.1);
-padding: 13px;
-margin: 0;
-position: relative;
+  background: rgba(255,255,255,.1);
+  padding: 13px;
+  margin: 0;
+  position: relative;
 }
 
 #container.instagram {
@@ -193,16 +203,16 @@ position: relative;
 }
 
 .rank0 {
-  width: 41%;
-  height: auto;
+  width: 40%;
+  padding: 20% 0;
 }
 .rank1 {
-  width: 33%;
-  height: auto;
+  width: 32%;
+  padding: 16% 0;
 }
 .rank2 {
-  width: 25%;
-  height: auto;
+  width: 26%;
+  padding: 13% 0;
 }
 .rank3 {
   width: 17%;

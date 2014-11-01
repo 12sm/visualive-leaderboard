@@ -8,9 +8,11 @@
   function initialize(){
     var $container = $('#container');
     $container.isotope({
-      itemSelector : '.item',
+      itemSelector : '.ite',
       layoutMode   : 'masonry',
-      masonry      : {gutter: 10},
+      masonry      : {
+        gutter     : 10
+      },
       getSortData  : {
         likes      : '.likes'
       }
@@ -46,11 +48,9 @@
   }
 
   function rank(dom){
-    var $items = dom.find('.item');
-    $('.img').remove();
+    var $items = dom.find('.ite');
     $items.each( function( i, item ) {
       var $item = $(item);
-      var $img = $('<img>');
       var photoUrl = costumes[i].images.standard_resolution.url;
       var caption = costumes[i].caption.text;
       if (caption.indexOf("@") != -1){
@@ -59,10 +59,9 @@
         $item.find('.username').text( '@' + tion[0] );
       }
       $item.find('.likes').text( costumes[i].likes.count );
-      $img.addClass('img');
-      $img.attr('src', photoUrl);
-      $item.find('.photo').append($img);
       $item.addClass('rank' + i);
+      console.log('info' + (i+1));
+      document.getElementById('info' + (i+1)).style.backgroundImage = 'url(' + photoUrl + ')';
     });
     dom.isotope('updateSortData', $items);
     dom.isotope({ sortBy: 'likes', sortAscending: false });
