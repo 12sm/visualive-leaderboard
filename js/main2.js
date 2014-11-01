@@ -10,6 +10,7 @@
     $container.isotope({
       itemSelector : '.item',
       layoutMode   : 'masonry',
+      masonry      : {gutter: 10},
       getSortData  : {
         likes      : '.likes'
       }

@@ -192,14 +192,47 @@ position: relative;
   height: 0px;
 }
 
-.rank0 {}
-.rank1 {}
-.rank2 {}
-.rank3 {}
-.rank4 {}
-.rank5 {}
-.rank6 {}
-.rank7 {}
-.rank8 {}
-.rank9 {}
-.rank10 {}
+.rank0 {
+  width: 41%;
+  height: auto;
+}
+.rank1 {
+  width: 33%;
+  height: auto;
+}
+.rank2 {
+  width: 25%;
+  height: auto;
+}
+.rank3 {
+  width: 17%;
+  height: auto;
+}
+.rank4 {
+  width: 13%;
+  height: auto;
+}
+.rank5 {
+  width: 8%;
+  height: auto;
+}
+.rank6 {
+  width: 8%;
+  height: auto;
+}
+.rank7 {
+  width: 8%;
+  height: auto;
+}
+.rank8 {
+  width: 8%;
+  height: auto;
+}
+.rank9 {
+  width: 8%;
+  height: auto;
+}
+.rank10 {
+  width: 8%;
+  height: auto;
+}
