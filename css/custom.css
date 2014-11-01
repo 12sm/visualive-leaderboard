@@ -16,8 +16,8 @@ body {
 .container-fluid {
   height:100%;
   width:100%;
-  padding-right: 50px;
-  padding-left: 50px;
+  padding-right: 50px!important;
+  padding-left: 50px!important;
   margin-right: auto;
   margin-left: auto;
 }
