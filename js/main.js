@@ -57,15 +57,13 @@
         var cap = caption.split("@");
         var tion = cap[1].split(" ", 1);
         $item.find('.username').text( '@' + tion[0] );
-      } else {
-        $item.find('.username').text( '@' + tion[0] );
       }
       $item.find('.likes').text( costumes[i].likes.count );
       $img.addClass('img');
       $img.attr('src', photoUrl);
       $item.find('.photo').append($img);
     });
-    dom.isotope('updateSortData', $items);
+    dom.isotope('updateSortData', $item);
     dom.isotope({ sortBy: 'likes', sortAscending: false });
   }
 
